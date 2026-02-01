@@ -1,0 +1,235 @@
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* WIE Purple/Magenta Theme */
+    --background: 0 0% 100%;
+    --foreground: 270 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 50% 10%;
+
+    /* Primary: Deep Magenta/Purple */
+    --primary: 270 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft lavender */
+    --secondary: 270 30% 95%;
+    --secondary-foreground: 270 50% 30%;
+
+    /* Muted: Light gray with purple tint */
+    --muted: 270 20% 96%;
+    --muted-foreground: 270 10% 45%;
+
+    /* Accent: Warm gold */
+    --accent: 38 90% 55%;
+    --accent-foreground: 38 90% 15%;
+
+    /* Pink accent for highlights */
+    --pink: 330 80% 60%;
+    --pink-foreground: 0 0% 100%;
+
+    /* Purple gradient stops */
+    --purple-light: 280 70% 65%;
+    --purple-dark: 265 80% 45%;
+    --magenta: 300 70% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 20% 90%;
+    --input: 270 20% 90%;
+    --ring: 270 70% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 70% 50%), hsl(300 70% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 80% 55%), hsl(310 75% 55%), hsl(330 80% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(270 30% 98%), hsl(0 0% 100%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(270 20% 99%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(270 50% 30% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(270 50% 30% / 0.12);
+    --shadow-lg: 0 16px 48px -12px hsl(270 50% 30% / 0.15);
+    --shadow-glow: 0 0 40px -10px hsl(270 70% 50% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 270 70% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 270 30% 95%;
+    --sidebar-accent-foreground: 270 50% 30%;
+    --sidebar-border: 270 20% 91%;
+    --sidebar-ring: 270 70% 50%;
+  }
+
+  .dark {
+    --background: 270 50% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 270 40% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 270 40% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 280 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 30% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 270 25% 12%;
+    --muted-foreground: 270 15% 65%;
+
+    --accent: 38 85% 50%;
+    --accent-foreground: 38 90% 95%;
+
+    --pink: 330 75% 55%;
+    --pink-foreground: 0 0% 100%;
+
+    --purple-light: 280 65% 55%;
+    --purple-dark: 265 75% 40%;
+    --magenta: 300 65% 45%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 25% 18%;
+    --input: 270 25% 18%;
+    --ring: 280 70% 60%;
+
+    --sidebar-background: 270 40% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 280 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 30% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 270 25% 18%;
+    --sidebar-ring: 280 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .gradient-bg {
+    background-image: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-2xl;
+    box-shadow: var(--shadow-md);
+    background-image: var(--gradient-card);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium text-white transition-all duration-300;
+    background-image: var(--gradient-primary);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium border-2 border-primary text-primary bg-transparent transition-all duration-300 hover:bg-primary hover:text-white;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .bg-grid {
+    background-image: 
+      linear-gradient(to right, hsl(270 20% 92%) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(270 20% 92%) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(hsl(270 30% 85%) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
