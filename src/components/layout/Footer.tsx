@@ -26,7 +26,7 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold mb-4 text-background">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About", "Team", "Events", "Contact"].map((link) => (
+              {["Home", "About", "Team", "Events","Achievements", "Contact"].map((link) => (
                 <li key={link}>
                   <Link
                     to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
@@ -61,10 +61,8 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-4 text-background">Follow Us</h4>
             <div className="flex gap-3">
               {[
-                { icon: Facebook, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Instagram, href: "#" },
+                { icon: Facebook, href: "https://www.facebook.com/IEEE.WIE.FSS" },
+                { icon: Instagram, href: "https://www.instagram.com/ieee_wie_fss/" },
               ].map((social, index) => (
                 <a
                   key={index}
@@ -82,7 +80,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/60">
-            © {new Date().getFullYear()} IEEE WIE FSS Student Branch. All rights reserved.
+            © {new Date().getFullYear()} IEEE WIE FSS Student Branch. All rights reserved. By Alaa Naili.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-sm text-background/60">Part of</span>

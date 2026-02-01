@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react";
-import { i } from "node_modules/vite/dist/node/types.d-aGj9QkWt";
 
 const events = [
   {
@@ -222,34 +221,34 @@ const Events = () => {
                 className="group card-elevated card-hover rounded-2xl overflow-hidden"
               >
                 {/* Event Banner */}
-<div
-  className="relative aspect-[16/10] overflow-hidden bg-center bg-cover"
-  style={{ backgroundImage: `url(${event.image})` }}
->
-  {/* Dark / gradient overlay */}
-  <div className="absolute inset-0 gradient-hero opacity-70" />
+                <div
+                  className="relative aspect-[16/10] overflow-hidden bg-center bg-cover"
+                  style={{ backgroundImage: `url(${event.image})` }}
+                >
+                  {/* Dark / gradient overlay */}
+                  <div className="absolute inset-0 gradient-hero opacity-70" />
 
-  {/* Text content */}
-  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 text-center">
-    <span className="text-sm font-medium opacity-80 uppercase tracking-wide">
-      {event.category}
-    </span>
-    <span className="text-2xl font-heading font-bold mt-1">
-      {event.title}
-    </span>
-  </div>
+                  {/* Text content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <span className="text-sm font-medium opacity-80 uppercase tracking-wide">
+                      {event.category}
+                    </span>
+                    <span className="text-2xl font-heading font-bold mt-1">
+                      {event.title}
+                    </span>
+                  </div>
 
-  {/* Status Badge */}
-  <div
-    className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
-      event.status === "upcoming"
-        ? "bg-accent text-accent-foreground"
-        : "bg-muted text-muted-foreground"
-    }`}
-  >
-    {event.status === "upcoming" ? "Upcoming" : "Past"}
-  </div>
-</div>
+                  {/* Status Badge */}
+                  <div
+                    className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
+                      event.status === "upcoming"
+                        ? "bg-accent text-accent-foreground"
+                        : "bg-muted text-muted-foreground"
+                    }`}
+                  >
+                    {event.status === "upcoming" ? "Upcoming" : "Past"}
+                  </div>
+                </div>
 
                 {/* Event Details */}
                 <div className="p-6">

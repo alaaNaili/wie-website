@@ -7,49 +7,49 @@ const teamMembers = [
   {
     name: "Emna Fendri",
     role: "Counselor/Advisor",
-    image: null,
+    image: "/team/emna-fendri.png",
     bio: "Computer Science Professor.",
     social: { linkedin: "#", phone: "#", email: "emna.fendri@ieee.org" },
   },
   {
     name: "Nessryne Chouchene",
     role: "Chair",
-    image: null,
+    image: "/team/nessryne.jpeg",
     bio: "Data Engineering student.",
     social: { linkedin: "#", phone: "50060776", email: "nessryne.chouchene@ieee.org" },
   },
   {
     name: "Yasmine Abbes",
     role: "Vice Chair",
-    image: null,
+    image: "/team/yasmine-abbes.png",
     bio: "Computer Science student.",
     social: { linkedin: "#", phone: "25300477", email: "yasmine.abbes@ieee.org" },
   },
   {
     name: "Amira Krid",
     role: "Secretary",
-    image: null,
+    image: "/team/amira-krid.png",
     bio: "Computer Science student.",
     social: { linkedin: "#", phone: "23368210", email: "amira.krid@ieee.org" },
   },
   {
     name: "Alaa Naili",
     role: "Technical Lead",
-    image: null,
+    image: "/team/alaa_naili.jpg",
     bio: "Computer Science student.",
     social: { linkedin: "www.linkedin.com/in/alaa-naili", phone: "27456117", email: "alaanaili.pro@gmail.com" },
   },
   {
     name: "Fatma Maalej",
     role: "Treasurer",
-    image: null,
+    image: "/team/fatma-maalej.jpeg",
     bio: "Data Science student.",
     social: { linkedin: "#", phone: "94286751", email: "fatma.maalej466@gmail.com" },
   },
   {
     name: "Yasmine Feki",
     role: "Webmaster",
-    image: null,
+    image: "/team/yasmine-feki.png",
     bio: "Data Engineering student.",
     social: { linkedin: "#", phone: "2300026", email: "yassmine.feki@ieee.org" },
   },
@@ -97,11 +97,9 @@ const Team = () => {
               >
                 {/* Avatar */}
                 <div className="relative aspect-square bg-secondary overflow-hidden">
-                  <div className="absolute inset-0 gradient-hero opacity-60" />
+                  <div className="relative aspect-square overflow-hidden bg-center bg-cover" style={{ backgroundImage: `url(${member.image})` }}/>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-5xl font-heading font-bold text-white">
-                      {member.name.split(" ").map(n => n[0]).join("")}
-                    </span>
+                    
                   </div>
                   
                   {/* Social overlay */}

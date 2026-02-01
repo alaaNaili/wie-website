@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Team from "./pages/Team";
 import Events from "./pages/Events";
+import Achievements from "./pages/achievements";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/achievements" element={<Achievements />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

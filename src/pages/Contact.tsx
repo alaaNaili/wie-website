@@ -199,7 +199,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+216 XX XXX XXX</p>
+                    <p className="text-muted-foreground">+216 50 060 776</p>
                   </div>
                 </div>
               </div>
@@ -209,10 +209,8 @@ const Contact = () => {
                 <h3 className="font-semibold mb-4">Follow Us</h3>
                 <div className="flex gap-3">
                   {[
-                    { icon: Facebook, href: "#", label: "Facebook" },
-                    { icon: Twitter, href: "#", label: "Twitter" },
-                    { icon: Linkedin, href: "#", label: "LinkedIn" },
-                    { icon: Instagram, href: "#", label: "Instagram" },
+                    { icon: Facebook, href: "https://www.facebook.com/IEEE.WIE.FSS", label: "Facebook" },
+                    { icon: Instagram, href: "https://www.instagram.com/ieee_wie_fss/", label: "Instagram" },
                   ].map((social) => (
                     <a
                       key={social.label}
